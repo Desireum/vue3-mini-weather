@@ -15,6 +15,22 @@
 
 > 从`vue-mini-weather`迁移过来的基于`vue3.x`框架开发，`Vite`打包的的一款迷你天气预报展示的小组件，目前只支持中国大陆的天气预报，原因在更新公告中有，有问题请提[issue](https://github.com/hjiachuang/vue3-mini-weather/issues)
 
+#### 目录结构
+```
+-npm                    // 这个文件夹是上传到npm仓库的，也就是npm i vue3-mini-weather下载的内容就是这个文件夹里的内容
+  -npm
+  -src
+    -lib
+  ...
+-public                 // 就是一个vite的logo
+  vite.svg
+-src                    // 项目源文件，跟npm里的就是少了个App.vue和main.ts而已
+  -lib
+  App.vue
+  main.ts
+...
+```
+
 #### 📦 安装
 
   **2022.11.15** 
@@ -88,15 +104,16 @@ type: {     // 天气图标类型 -- fill / line
 }
 ```
 
-##### 📖 更新
+#### 📖 更新
 
 * **版本0.1.1**
   
   更新时间：2022.11.15
 
-  1. 修改图标比例，之前版本的图标不协调，有些大有些小，重新改了。
-  2. `v-mini-weather`默认还导出了一个参数icon，直接传给`v-mini-weather-icon`就可以了，详见上面的使用方法
-  3. `v-mini-weather-icon`组件添加一个props参数: `type`，见上面的参数说明。
+  1. 从js迁移到ts，添加了.d.ts文件。
+  2. 修改图标比例，之前版本的图标不协调，有些大有些小，重新改了。
+  3. `v-mini-weather`默认还导出了一个参数icon，直接传给`v-mini-weather-icon`就可以了，详见上面的使用方法
+  4. `v-mini-weather-icon`组件添加一个props参数: `type`，见上面的参数说明。
 
 * **版本0.1.0**
   
