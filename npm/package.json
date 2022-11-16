@@ -12,8 +12,6 @@
     "lottie-web": "^5.9.6",
     "vue": "^3.2.41"
   },
-  "devDependencies": {
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",

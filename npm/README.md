@@ -13,7 +13,7 @@
 #### 项目展示
 [vue3-mini-weather展示页](https://apia.aidioute.cn/resource/vue-mini-weather/)
 
-> 从`vue-mini-weather`迁移过来的基于`vue3.x`框架开发，`Vite`打包的的一款迷你天气预报展示的小组件，目前只支持中国大陆的天气预报，原因在更新公告中有，有问题请提[issue](https://github.com/hjiachuang/vue3-mini-weather/issues)
+> 从`vue-mini-weather`迁移过来的基于`vue3.x`框架开发，`Vite`打包的一款迷你天气预报展示的小组件，目前只支持中国大陆的天气预报，原因在更新公告中有，有问题请提[issue](https://github.com/hjiachuang/vue3-mini-weather/issues)
 
 #### 目录结构
 ```
