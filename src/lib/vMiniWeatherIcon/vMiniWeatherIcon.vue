@@ -21,15 +21,29 @@ const props = defineProps({
 const id = ref('')
 const weatherIconAnimation:Ref<AnimationItem | null> = ref(null)
 const handleShowIcon = () => {
+  let icon:string = ''
   if (weatherIconAnimation.value) {
     weatherIconAnimation.value.destroy()
+  }
+  if (props.icon in weatherIcon) {
+    icon = props.icon
+  } else {
+    if (/^\d+$/.test(props.icon)) {
+      icon = 'd' + props.icon
+    }
+    if ((/^[dn]\d+$/.test(props.icon))) {
+      icon = props.icon.slice(1)
+    }
+  }
+  if (!(icon in weatherIcon)) {
+    icon = '99'
   }
   weatherIconAnimation.value = Lottie.loadAnimation({
     container: document.getElementById(id.value) as Element,
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    animationData: weatherIcon[props.icon]({ type: props.type })
+    animationData: weatherIcon[icon]({ type: props.type })
   })
 }
 onBeforeMount(() => {
